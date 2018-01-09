@@ -360,8 +360,15 @@ a {
   color: inherit;
 }
 
-h2:hover > a {
+h2 > a {
+  transition: box-shadow .2s, background .2s, color .2s;
+  padding: 7px 5px 5px 5px;
+}
 
+h2:hover > a {
+  color: white;
+  background: red;
+  box-shadow: 0 6px 0 darkred;
 }
 
 a > img {
