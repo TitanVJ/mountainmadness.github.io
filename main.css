@@ -62,7 +62,7 @@ body * {
   border: none;
   text-align: center;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1em;
   box-shadow: 0 6px 0 var(--darkred);
   transition: box-shadow .2s, color .2s, background .2s;
 }
@@ -269,7 +269,7 @@ header > h1 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   border-right: 30px solid var(--hill-shadow);
   border-left: 3px solid var(--hill-shadow);
 	background: var(--hill-color);
@@ -374,35 +374,28 @@ header > h1 {
 }
 
 #nav-links {
-  position: sticky;
-  top: calc(100vh - 1em - 2rem);
-  left: 0;
-  right: 0;
-  display: flex;
-  z-index: 9999;
-  margin: 0 auto;
   width: 320px;
   justify-content: space-around;
   align-items: space-around;
+  background: rgba(255, 255, 255, .1);
+  width: 100%;
 }
 
-#nav-links label {
-  position: relative;
-  z-index: 99999;
+#nav-links a {
   display: inline-block;
-  user-select: none;
-  -moz-user-select: none;
-  flex: 1 0 auto;
   font-size: 1rem;
-  background: white;
-  color: black;
+  color: white;
   text-decoration: none;
-  padding: 7px 7px 5px 7px;
-  box-shadow: 0 4px 0 grey;
-  margin: 4px;
-  text-align: center;
+  padding: 1em 7px;
+  margin: 0em 7px;
   vertical-align: middle;
+  transition: box-shadow .2s;
 }
+
+#nav-links a:hover {
+  box-shadow: 0 4px 0 grey;
+}
+
 
 #schedule h3 {
   flex: 1 0 100%;
