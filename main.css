@@ -31,7 +31,7 @@ body * {
   position: absolute;
   top: 0;
   width: 100%;
-  height: calc(100vh + var(--hill-height));
+  height: 100vh;
   z-index: -3;
   background-color: black;
   background-image:
@@ -44,7 +44,6 @@ body * {
 }
 
 #above-fold {
-
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
@@ -81,7 +80,8 @@ body * {
 header {
   text-align: center;
   color: white;
-  margin: 0em 0;
+  margin: 0;
+  height: 50vh;
 }
 
 header > h2,
@@ -108,8 +108,6 @@ header > h1 {
 
 #building {
   position: relative;
-  bottom: var(--hill-height);
-  bottom: -1em;
   z-index: -2;
   margin: 3em 0 0 0;
   min-width: 90px;
@@ -148,7 +146,6 @@ header > h1 {
   border-right: 30px solid var(--hill-shadow);
   border-left: 3px solid var(--hill-shadow);
   position: relative;
-  bottom: -1em;
   z-index: -2;
   display: flex;
   flex-flow: row wrap;
