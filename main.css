@@ -19,6 +19,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   /*background: linear-gradient(to bottom, var(--sky-color) 90vh, var(--hill-color) 90vh, var(--hill-color) 120vh, var(--hill-color) 140vh) no-repeat;*/
+  background: linear-gradient(to right, var(--hill-shadow) 3px, var(--hill-color) 3px, var(--hill-color) calc(100vw - 42px), var(--hill-shadow) calc(100vw - 42px));
 }
 
 body * {
@@ -36,7 +37,8 @@ body * {
   background-image:
     radial-gradient(white 3px, transparent 2px),
     radial-gradient(white 1px, transparent 2px),
-    radial-gradient(rgba(255, 255, 255, .5) 2px, transparent 2px);
+    radial-gradient(rgba(255, 255, 255, .5) 2px, transparent 2px),
+    linear-gradient(transparent 100vh, var(--hill-color) 100vh, var(--hill-color) 150vh);
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
