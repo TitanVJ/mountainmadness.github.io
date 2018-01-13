@@ -1,44 +1,78 @@
 body {
   --hill-width: 40vw;
-  --hill-height: 45vh;
+  --hill-height: 50vh;
   --hill-padding: 5vh;
+  --hill-shadow: #0d5;
+  --hill-shadow: #002805;
   --hill-color: #22ff77;
+  --hill-color: #004208;
+  --sky-color: #2277ff;
+  --sky-color: #001c1f;
+  --sky-color: #000c0f;
+  --cloud-color: #ccc;
+  --red: #550400;
+  --red: #880500;
+  --darkred: #330300;
+  --darkred: #550500;
+  --lightred: #aa1500;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(to bottom, #2277ff 90vh, var(--hill-color) 90vh) no-repeat;
+  /*background: linear-gradient(to bottom, var(--sky-color) 90vh, var(--hill-color) 90vh, var(--hill-color) 120vh, var(--hill-color) 140vh) no-repeat;*/
 }
 
 body * {
   box-sizing: border-box;
 }
 
+#above-fold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100vh + var(--hill-height));
+  z-index: -3;
+  background-color: black;
+  background-image:
+    radial-gradient(white 3px, transparent 2px),
+    radial-gradient(white 1px, transparent 2px),
+    radial-gradient(rgba(255, 255, 255, .5) 2px, transparent 2px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
 #above-fold {
+
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  margin: 0;
 }
 
-#above-fold > button {
-  padding: 12px;
+.btn, button {
+  display: inline-block;
+  padding: 12px 12px 10px 12px;
+  font-size: inherit;
   font-weight: 700;
   color: white;
-  background: red;
+  background: var(--red);
+  white-space: nowrap;
   border: none;
   text-align: center;
   cursor: pointer;
   font-size: 1.2rem;
-  box-shadow: 0 6px 0 darkred;
-  margin: 0 0 1em 0;
+  box-shadow: 0 6px 0 var(--darkred);
+  transition: box-shadow .2s, color .2s, background .2s;
 }
 
-#above-fold > button:focus,
-#above-fold > button:hover {
-  background: #f22;
+.btn:focus, button:focus,
+.btn:hover, button:hover {
+  background: var(--lightred);
 }
 
-#above-fold > button:active {
-  background: #e00;
+.btn:active, button:active {
+  background: var(--darkred);
 }
 
 
@@ -72,6 +106,8 @@ header > h1 {
 
 #building {
   position: relative;
+  bottom: var(--hill-height);
+  bottom: -1em;
   z-index: -2;
   margin: 3em 0 0 0;
   min-width: 90px;
@@ -92,7 +128,7 @@ header > h1 {
 }
 
 #building::before {
-  background: red;
+  background: var(--red);
   content: 'SFU';
   color: white;
   position: relative;
@@ -107,62 +143,62 @@ header > h1 {
 #mountain {
   border-top-left-radius: 30%;
   border-top-right-radius: 30%;
-  border-right: 30px solid #0d5;
-  border-left: 3px solid #0d5;
+  border-right: 30px solid var(--hill-shadow);
+  border-left: 3px solid var(--hill-shadow);
   position: relative;
-  display: flex;
+  bottom: -1em;
   z-index: -2;
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: flex-start;
   padding-top: var(--hill-padding);
-  margin-bottom: 10vh;
   width: 50vw;
   min-width: 320px;
-  height: var(--hill-height);
+  min-height: calc(var(--hill-height) + 1em);
   background: var(--hill-color);
 }
 
-.tree {
-  --trunk-width: 1vmax;
-  --trunk-height: 2vmax;
-  --foliage-width: 3vmax;
-  --foliage-height: 5vmax;
-  flex: 0 0 0;
-  margin: var(--foliage-height) var(--foliage-width);
+.grass {
+  position: relative;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+	width: 100%;
+	height: 100%;
+  width: 2rem;
+  height: 5rem;
+	background: 
+		linear-gradient(315deg, var(--hill-shadow) 25%, transparent 25%),
+		linear-gradient(45deg, var(--hill-shadow) 25%, transparent 25%); 
+	background-color: var(--hill-color);
+	background-position: 0 0;
+  /*
+	background-size: calc(var(--hill-height) / 20) 5vw;
+	background-size: calc(var(--hill-height) / 20) 5vw;
+  background-size: 1rem .25rem;
+  */
+	background-position: bottom left;
 }
 
-.tree:nth-child(odd) {
-  margin-top: calc(var(--foliage-height) * 2);
+.grass:nth-child(1) {
+  top: 5em;
+  right: 0em;
 }
 
-.tree::before {
-  content: '';
-  position: absolute;
-  background: brown;
-  box-shadow: -3px 0 0 inset #533;
-  width: var(--trunk-width);
-  height: var(--trunk-height);
+.grass:nth-child(2) {
+  top: 0em;
+  right: 1em;
 }
 
-.tree::after {
-  content: '';
-  position: absolute;
-  width: var(--foliage-width);
-  height: var(--foliage-height);
-  margin-left: calc(var(--foliage-width)/-2 + var(--trunk-width)/2);
-  margin-top: calc(-1*var(--foliage-height));
-  clip-path: polygon(50% 0%, 95% 60%, 75% 60%, 100% 100%, 0 100%, 25% 60%, 5% 60%);
-  border: 1px solid #060;
-  box-shadow: -4px 4px 0 2px inset #060;
-  border-top-right-radius: 80%;
-  background: green;
+.grass:nth-child(3) {
+  top: 7em;
+  left: 1em;
 }
 
 #clouds-container {
   overflow-x: hidden;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   width: 100%;
   top: 0;
   margin-top: 8vh;
@@ -187,7 +223,7 @@ header > h1 {
 }
 
 .cloud {
-  background: white;
+  background: var(--cloud-color);
   width: var(--width);
   height: var(--height);
   border-radius: calc(var(--width) / 3);
@@ -197,7 +233,7 @@ header > h1 {
 .cloud::after {
   content: "";
   position: absolute;
-  background: white;
+  background: var(--cloud-color);
   height: calc(var(--width) / 3);
   width: calc(var(--width) / 3);
   border-radius: 50%;
@@ -208,7 +244,7 @@ header > h1 {
 .cloud::before {
   content: "";
   position: absolute;
-  background: white;
+  background: var(--cloud-color);
   height: calc(var(--width) / 2);
   width: calc(var(--width) / 2);
   border-radius: 50%;
@@ -235,49 +271,107 @@ header > h1 {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  color: #000;
+  border-right: 30px solid var(--hill-shadow);
+  border-left: 3px solid var(--hill-shadow);
+	background: var(--hill-color);
+
+  color: white;
 }
 
 #info-container > article {
   background: rgba(255, 255, 255, 0.8);
   background: none;
   padding: 1em;
-  max-width: 100vw;
-  display: none;
+  max-width: 100%;
 }
 
 #info-container > article > div {
   flex: 0 0 auto;
   max-width: 500px;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
-#info-container > article > h2 {
+#info-container > article h2 {
   text-align: center;
-  flex: 10 0 90vw;
 }
 
-#faq > h2 {
-  width: 100%;
+#sponsors > .btn {
+  text-align: center;
 }
 
-#faq > div {
-  max-width: 400px;
+/* if have more sponsors, add sponsors here too */
+#schedule, #faq {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#schedule > h2, #schedule > h3, #faq > h2 {
+  flex: 1 0 100%;
+}
+
+#schedule > div, #faq > div {
+  flex: 1 0 auto;
 }
 
 .forest {
-  position: absolute;
+  position: relative;
   display: flex;
-  z-index: -1;
-  flex-flow: row wrap;
-  width: 95vw;
-  margin: auto;
+  z-index: 99999;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: space-around;
+  max-width: 95vw;
+  height: calc(var(--trunk-height) + var(--foliage-height));
   overflow: hidden;
 }
 
-.forest > .tree {
-  margin-left: auto;
+.tree {
+  --trunk-width: 1vmax;
+  --trunk-height: 2vmax;
+  --foliage-width: 3vmax;
+  --foliage-height: 5vmax;
+  flex: 1 0 auto;
+  /*
+  height: calc(var(--trunk-height) + var(--foliage-height));
+  margin: var(--foliage-height) var(--foliage-width);
+  margin: 0;
+  margin: auto;
+  */
+  margin: var(--foliage-height) var(--foliage-width) var(--trunk-height) var(--foliage-width);
+}
+
+/*
+.tree:nth-child(odd) {
+  margin-top: calc(var(--foliage-height) * 2);
+}
+*/
+
+.tree::before {
+  content: '';
+  position: absolute;
+  background: brown;
+  box-shadow: -3px 0 0 inset #533;
+  width: var(--trunk-width);
+  height: var(--trunk-height);
+}
+
+.tree::after {
+  content: '';
+  position: absolute;
+  width: var(--foliage-width);
+  height: var(--foliage-height);
+  margin-left: calc(var(--foliage-width)/-2 + var(--trunk-width)/2);
+  margin-top: calc(-1*var(--foliage-height));
+  clip-path: polygon(50% 0%, 95% 60%, 75% 60%, 100% 100%, 0 100%, 25% 60%, 5% 60%);
+  /*
+  border: 1px solid #060;
+  border-top-right-radius: 80%;
+  box-shadow: -4px 4px 0 2px inset #060;
+  */
+  background: green;
+  background: var(--hill-shadow);
 }
 
 #nav-links {
@@ -300,6 +394,7 @@ header > h1 {
   user-select: none;
   -moz-user-select: none;
   flex: 1 0 auto;
+  font-size: 1rem;
   background: white;
   color: black;
   text-decoration: none;
@@ -308,36 +403,6 @@ header > h1 {
   margin: 4px;
   text-align: center;
   vertical-align: middle;
-}
-
-button, #nav-links label {
-  transition: box-shadow .2s, color .2s, background .2s, bottom .2s;
-}
-
-button:hover, #nav-links label:hover {
-  background: red;
-  box-shadow: 0 4px 0 darkred;
-  color: white;
-  position: relative;
-  cursor: pointer;
-  bottom: 2px;
-}
-
-input[type=radio] {
-  position:absolute;
-  visibility: hidden;
-}
-
-#info-container > input[type=radio]:checked + article {
-  max-width: 100vw;
-  flex: 1 0 20vw;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  margin-bottom: 3rem;
-  line-height: 2;
 }
 
 #schedule h3 {
@@ -365,25 +430,20 @@ h2 > a {
   padding: 7px 5px 5px 5px;
 }
 
-h2:hover > a {
-  color: white;
-  background: red;
-  box-shadow: 0 6px 0 darkred;
-}
-
 a > img {
-  width: 460px;
-  height: 230px;
+  max-width: calc(100vw - 4em);
+  height: auto;
   background: white;
   filter: grayscale(100%);
   opacity: .8;
   transition: opacity .2s, filter .2s;
 }
 
+#mobify {
+  width: 100%;
+}
+
 a:hover > img {
   filter: none;
   opacity: 1;
 }
-
-
-
