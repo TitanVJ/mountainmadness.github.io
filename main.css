@@ -326,6 +326,10 @@ header > h1 {
   max-width: 100%;
 }
 
+#faq p {
+  margin: 0 1em;
+}
+
 table td {
   padding: .5em 0;
   max-width: 45%;
@@ -334,6 +338,7 @@ table td {
 #schedule > h2, #schedule > h3, #faq > h2 {
   flex: 1 0 100%;
 }
+
 
 .forest {
   position: relative;
