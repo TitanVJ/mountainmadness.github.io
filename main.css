@@ -122,9 +122,11 @@ header > h1 {
     font-size: 4rem;
     text-shadow: 0 10px 0 black;
   }
+  /*
   #info-container > article > div {
     max-width: 500px;
   }
+  */
 }
 
 #building {
@@ -302,7 +304,6 @@ header > h1 {
   background: rgba(255, 255, 255, 0.8);
   background: none;
   padding: 1em 0;
-  max-width: 100%;
 }
 
 #info-container > article > div {
