@@ -122,6 +122,9 @@ header > h1 {
     font-size: 4rem;
     text-shadow: 0 10px 0 black;
   }
+  #info-container > article > div {
+    max-width: 500px;
+  }
 }
 
 #building {
@@ -304,10 +307,10 @@ header > h1 {
 
 #info-container > article > div {
   flex: 0 0 auto;
-  max-width: 500px;
   margin-left: 1em;
   margin-right: 1em;
   /*
+  max-width: 500px;
   */
 }
 
