@@ -305,9 +305,9 @@ header > h1 {
 #info-container > article > div {
   flex: 0 0 auto;
   max-width: 500px;
-  /*
   margin-left: 1em;
   margin-right: 1em;
+  /*
   */
 }
 
