@@ -333,10 +333,6 @@ header > h1 {
   flex: 1 0 100%;
 }
 
-#schedule > div, #faq > div {
-  flex: 1 0 auto;
-}
-
 .forest {
   position: relative;
   display: flex;
