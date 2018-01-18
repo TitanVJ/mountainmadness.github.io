@@ -127,6 +127,9 @@ header > h1 {
   #info-container > article > div {
     max-width: 500px;
   }
+  #mountain {
+    max-width: 500px;
+  }
 }
 
 #building {
@@ -176,9 +179,8 @@ header > h1 {
   justify-content: space-around;
   align-content: flex-start;
   padding-top: var(--hill-padding);
-  width: 100%;
   min-width: 320px;
-  max-width: 500px;
+  width: 100%;
   min-height: calc(var(--hill-height) + 1em);
   background: var(--hill-color);
 }
