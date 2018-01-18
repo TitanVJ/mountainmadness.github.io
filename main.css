@@ -28,6 +28,7 @@ body {
   /*background: linear-gradient(to bottom, var(--sky-color) 90vh, var(--hill-color) 90vh, var(--hill-color) 120vh, var(--hill-color) 140vh) no-repeat;*/
   background: linear-gradient(to right, var(--hill-shadow) 3px, var(--hill-color) 3px, var(--hill-color) calc(100vw - 42px), var(--hill-shadow) calc(100vw - 42px));
   background: var(--hill-color);
+  background: red;
 }
 
 p {
