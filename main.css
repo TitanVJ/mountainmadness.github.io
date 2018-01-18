@@ -1,3 +1,8 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 body {
   --hill-width: 40vw;
   --hill-height: 50vh;
@@ -17,6 +22,7 @@ body {
   --lightred: #aa1500;
   margin: 0;
   padding: 0;
+  width: 100%;
   font-family: sans-serif;
   /*background: linear-gradient(to bottom, var(--sky-color) 90vh, var(--hill-color) 90vh, var(--hill-color) 120vh, var(--hill-color) 140vh) no-repeat;*/
   background: linear-gradient(to right, var(--hill-shadow) 3px, var(--hill-color) 3px, var(--hill-color) calc(100vw - 42px), var(--hill-shadow) calc(100vw - 42px));
