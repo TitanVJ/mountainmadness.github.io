@@ -318,6 +318,12 @@ header > h1 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  max-width: 100%;
+}
+
+table td {
+  padding: .5em 0;
+  max-width: 45%;
 }
 
 #schedule > h2, #schedule > h3, #faq > h2 {
