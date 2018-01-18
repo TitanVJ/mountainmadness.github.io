@@ -118,20 +118,6 @@ header > h1 {
   text-shadow: 0 5px 0 black;
 }
 
-@media (min-width: 770px) {
-  header > h1 {
-    font-size: calc(100vw / 24);
-    font-size: 4rem;
-    text-shadow: 0 10px 0 black;
-  }
-  #info-container > article > div {
-    max-width: 500px;
-  }
-  #mountain {
-    max-width: 500px;
-  }
-}
-
 #building {
   position: relative;
   z-index: -2;
@@ -462,3 +448,18 @@ a:hover > img {
   filter: none;
   opacity: 1;
 }
+
+@media (min-width: 770px) {
+  header > h1 {
+    font-size: calc(100vw / 24);
+    font-size: 4rem;
+    text-shadow: 0 10px 0 black;
+  }
+  #info-container > article > div {
+    max-width: 500px;
+  }
+  #mountain {
+    max-width: 500px;
+  }
+}
+
