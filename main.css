@@ -3,6 +3,7 @@ html {
   padding: 0;
   width: 100%;
 }
+
 body {
   --hill-width: 40vw;
   --hill-height: 50vh;
@@ -63,6 +64,7 @@ body * {
 }
 
 #above-fold {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
