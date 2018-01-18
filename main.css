@@ -1,7 +1,8 @@
 html {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
 }
 
 body {
@@ -383,9 +384,6 @@ header > h1 {
 }
 
 #nav-links {
-  width: 320px;
-  justify-content: space-around;
-  align-items: space-around;
   background: rgba(255, 255, 255, .1);
   width: 100%;
 }
