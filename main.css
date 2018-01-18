@@ -327,7 +327,7 @@ header > h1 {
 }
 
 #faq div {
-  max-width: 100%;
+  max-width: calc(100% - 2em);
   margin-left: 1em;
   margin-right: 1em;
 }
