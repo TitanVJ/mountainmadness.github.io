@@ -327,7 +327,8 @@ header > h1 {
 }
 
 #faq p {
-  margin: 0 1em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 table td {
@@ -337,6 +338,8 @@ table td {
 
 #schedule > h2, #schedule > h3, #faq > h2 {
   flex: 1 0 100%;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 
