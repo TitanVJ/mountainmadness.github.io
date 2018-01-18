@@ -20,6 +20,19 @@ body {
   font-family: sans-serif;
   /*background: linear-gradient(to bottom, var(--sky-color) 90vh, var(--hill-color) 90vh, var(--hill-color) 120vh, var(--hill-color) 140vh) no-repeat;*/
   background: linear-gradient(to right, var(--hill-shadow) 3px, var(--hill-color) 3px, var(--hill-color) calc(100vw - 42px), var(--hill-shadow) calc(100vw - 42px));
+  background: var(--hill-color);
+}
+
+p {
+  line-height: 1.5;
+}
+
+table {
+  font-size: 1rem;
+}
+
+table * {
+  font-size: inherit;
 }
 
 body * {
@@ -80,8 +93,7 @@ body * {
 header {
   text-align: center;
   color: white;
-  margin: 0;
-  height: 50vh;
+  margin: auto 0;
 }
 
 header > h2,
@@ -153,8 +165,9 @@ header > h1 {
   justify-content: space-around;
   align-content: flex-start;
   padding-top: var(--hill-padding);
-  width: 50vw;
+  width: 100%;
   min-width: 320px;
+  max-width: 500px;
   min-height: calc(var(--hill-height) + 1em);
   background: var(--hill-color);
 }
@@ -271,8 +284,6 @@ header > h1 {
   flex-flow: row wrap;
   justify-content: center;
   align-items: baseline;
-  border-right: 30px solid var(--hill-shadow);
-  border-left: 3px solid var(--hill-shadow);
 	background: var(--hill-color);
 
   color: white;
@@ -281,15 +292,17 @@ header > h1 {
 #info-container > article {
   background: rgba(255, 255, 255, 0.8);
   background: none;
-  padding: 1em;
+  padding: 1em 0;
   max-width: 100%;
 }
 
 #info-container > article > div {
   flex: 0 0 auto;
   max-width: 500px;
+  /*
   margin-left: 1em;
   margin-right: 1em;
+  */
 }
 
 #info-container > article h2 {
@@ -390,11 +403,12 @@ header > h1 {
   padding: 1em 7px;
   margin: 0em 7px;
   vertical-align: middle;
-  transition: box-shadow .2s;
+  transition: text-shadow .2s;
 }
 
 #nav-links a:hover {
-  box-shadow: 0 4px 0 grey;
+  /*box-shadow: 0 4px 0 grey;*/
+  text-shadow: 0 0 5px grey;
 }
 
 
