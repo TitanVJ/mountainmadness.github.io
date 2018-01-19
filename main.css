@@ -286,13 +286,13 @@ header > h1 {
   justify-content: center;
   align-items: baseline;
 	background: var(--hill-color);
+  background: linear-gradient(to bottom, var(--hill-color) 10%, #0a1f0a 40%, #0a0a10 100%);
+  background: linear-gradient(to bottom, var(--hill-color) 10%, #0a1f0a 40%);
 
   color: white;
 }
 
 #info-container > article {
-  background: rgba(255, 255, 255, 0.8);
-  background: none;
   padding: 1em 0;
 }
 
@@ -321,9 +321,19 @@ header > h1 {
   max-width: 100%;
 }
 
+/*
 #faq {
-  background: red;
+  background: #0a0a10;
+  background: linear-gradient(to bottom, var(--hill-color), #0a1f0a);
+  background: #0a1f0a;
 }
+
+#schedule {
+  background: linear-gradient(to bottom, var(--hill-color), #0a1f0a);
+  background: #0a1f0a;
+  background: linear-gradient(to bottom, #0a1f0a, var(--hill-color));
+}
+*/
 
 #schedule div, #faq div {
   max-width: calc(100% - 2em);
