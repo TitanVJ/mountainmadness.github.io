@@ -461,7 +461,7 @@ a > img {
   max-width: calc(100vw - 4em);
   height: auto;
   background: white;
-  filter: grayscale(100%);
+  /*filter: grayscale(100%);*/
   opacity: .8;
   transition: opacity .2s, filter .2s;
 }
