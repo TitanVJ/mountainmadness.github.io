@@ -314,7 +314,7 @@ header > h1 {
 }
 
 /* if have more sponsors, add sponsors here too */
-#schedule, #faq {
+#schedule, #faq, #prize, #sponsors {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -335,7 +335,7 @@ header > h1 {
 }
 */
 
-#schedule div, #faq div {
+#schedule div, #faq div, #prize div, #sponsors div {
   max-width: calc(100% - 2em);
   margin-left: 1em;
   margin-right: 1em;
@@ -346,7 +346,7 @@ table td {
   max-width: 45%;
 }
 
-#schedule > h2, #schedule > h3, #faq > h2 {
+#schedule > h2, #schedule > h3, #faq > h2, #prize > h2, #sponsors > h2 {
   flex: 1 0 100%;
 }
 
@@ -458,15 +458,15 @@ h2 > a {
 }
 
 a > img {
-  max-width: calc(100vw - 4em);
+  max-width: calc(100% - 4em);
   height: auto;
   background: white;
-  /*filter: grayscale(100%);*/
+  filter: grayscale(100%);
   opacity: .8;
   transition: opacity .2s, filter .2s;
 }
 
-#mobify {
+#mobify-logo {
   width: 100%;
 }
 
