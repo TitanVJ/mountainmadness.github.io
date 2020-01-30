@@ -489,3 +489,24 @@ a:hover > img {
   }
 }
 
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+footer a {
+  /* display: inline-block; */
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  /* padding: 1em 7px; */
+  /* margin: 0em 7px; */
+  /* vertical-align: middle; */
+  transition: text-shadow .2s;
+}
+
+footer p {
+  color: white;
+}
